@@ -16,7 +16,7 @@
     // Creates an array that lists out all of the options of the alphabet
     var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" ];
 
-    // Creating variables to hold the number of wins, losses, and ties and start this at 0.
+    // Creating variables to hold the number of wins and losses and start this at 0.
     var wins = 0;
     var losses = 0;
 
@@ -30,9 +30,7 @@
       // Randomly chooses a choice from the options array. This is the Computer's guess.
       var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
-      // Reworked our code from last step to use "else if" instead of lots of if statements.
-
-      // This logic determines the outcome of the game (win/loss/tie), and increments the appropriate number
+      // This logic determines the outcome of the game (win/loss), and increments the appropriate number
       if (userGuess === computerGuess) {
         wins++;
         }
@@ -43,127 +41,14 @@
           "<p>You chose: " + userGuess + "</p>" +
           "<p>The computer chose: " + computerGuess + "</p>" +
           "<p>wins: " + wins + "</p>" +
-          "<p>losses: " + losses + "</p>";
+          "<p>losses: " + losses + "</p>"
+          //Add the guesses that one selected thus far
+          "<p> your guesses thus far: " + userGuess +"</p>";
 
         // Set the inner HTML contents of the #game div to our html string
         document.querySelector("#game").innerHTML = html;
     };
-      //if ((userGuess === "a") || (userGuess === "b") || (userGuess === "c") || (userGuess === "d") || (userGuess === "e") || (userGuess === "f") || (userGuess === "g") || (userGuess === "h") || (userGuess === "i") || (userGuess === "j") || (userGuess === "k") || (userGuess === "l") || (userGuess === "m") || (userGuess === "n") || (userGuess === "o") || (userGuess === "p") || (userGuess === "q") || (userGuess === "r") || (userGuess === "s") || (userGuess === "t") || (userGuess === "u") || (userGuess === "v") || (userGuess === "w") || (userGuess === "x") || (userGuess === "y") || (userGuess === "z"))  {
-        
-        // if ((userGuess === "a") && (computerGuess === "a")) {
-        //   wins++;
-        // } else if ((userGuess === "a") && (computerGuess !== "a")) {
-        //   losses++;}
-        // if ((userGuess === "b") && (computerGuess === "b")) {
-        //   wins++;
-        // } else if ((userGuess === "b") && (computerGuess !== "b")) {
-        //   losses++;}
-        // // } else if ((userGuess === "c") && (computerGuess !== "c")) {
-        // //   losses++;
-        // } else if ((userGuess === "d") && (computerGuess !== "d")) {
-        //   losses++;
-        // } else if ((userGuess === "e") && (computerGuess !== "e")) {
-        //   losses++;
-        // } else if ((userGuess === "f") && (computerGuess !== "f")) {
-        //   losses++;
-        // } else if ((userGuess === "g") && (computerGuess !== "g")) {
-        //   losses++;
-        // } else if ((userGuess === "h") && (computerGuess !== "h")) {
-        //   losses++;
-        // } else if ((userGuess === "i") && (computerGuess !== "i")) {
-        //   losses++;
-        // } else if ((userGuess === "j") && (computerGuess !== "j")) {
-        //   losses++;
-        // } else if ((userGuess === "k") && (computerGuess !== "k")) {
-        //   losses++;
-        // } else if ((userGuess === "l") && (computerGuess !== "l")) {
-        //   losses++;
-        // } else if ((userGuess === "m") && (computerGuess !== "m")) {
-        //   losses++;
-        // } else if ((userGuess === "n") && (computerGuess !== "n")) {
-        //   losses++;
-        // } else if ((userGuess === "o") && (computerGuess !== "o")) {
-        //   losses++;
-        // } else if ((userGuess === "p") && (computerGuess !== "p")) {
-        //   losses++;
-        // } else if ((userGuess === "q") && (computerGuess !== "q")) {
-        //   wins++;
-        // } else if ((userGuess === "r") && (computerGuess !== "r")) {
-        //   wins++;
-        // } else if ((userGuess === "s") && (computerGuess !== "s")) {
-        //   wins++;
-        // } else if ((userGuess === "t") && (computerGuess !== "t")) {
-        //   wins++;
-        // } else if ((userGuess === "u") && (computerGuess !== "u")) {
-        //   wins++;
-        // } else if ((userGuess === "v") && (computerGuess !== "v")) {
-        //   wins++;
-        // } else if ((userGuess === "w") && (computerGuess !== "w")) {
-        //   wins++;
-        // } else if ((userGuess === "x") && (computerGuess !== "x")) {
-        //   wins++;
-        // } else if ((userGuess === "y") && (computerGuess !== "y")) {
-        //   wins++;
-        // } else if ((userGuess === "z") && (computerGuess !== "z")) {
-        //   wins++;
-        // } else if ((userGuess === "a") && (computerGuess === "a")) {
-        //   losses++;
-        // } else if ((userGuess === "b") && (computerGuess === "b")) {
-        //   losses++;
-        // } else if ((userGuess === "c") && (computerGuess === "c")) {
-        //   losses++;
-        // } else if ((userGuess === "d") && (computerGuess === "d")) {
-        //   losses++;
-        // } else if ((userGuess === "e") && (computerGuess === "e")) {
-        //   losses++;
-        // } else if ((userGuess === "f") && (computerGuess === "f")) {
-        //   losses++;
-        // } else if ((userGuess === "g") && (computerGuess === "g")) {
-        //   losses++;
-        // } else if ((userGuess === "h") && (computerGuess === "h")) {
-        //   losses++;
-        // } else if ((userGuess === "i") && (computerGuess === "i")) {
-        //   losses++;
-        // } else if ((userGuess === "j") && (computerGuess === "j")) {
-        //   losses++;
-        // } else if ((userGuess === "k") && (computerGuess === "k")) {
-        //   losses++;
-        // } else if ((userGuess === "l") && (computerGuess === "l")) {
-        //   losses++;
-        // } else if ((userGuess === "m") && (computerGuess === "m")) {
-        //   losses++;
-        // } else if ((userGuess === "n") && (computerGuess === "n")) {
-        //   losses++;
-        // } else if ((userGuess === "o") && (computerGuess === "o")) {
-        //   losses++;
-        // } else if ((userGuess === "p") && (computerGuess === "p")) {
-        //   losses++;
-        // } else if ((userGuess === "q") && (computerGuess === "q")) {
-        //   wins++;
-        // } else if ((userGuess === "r") && (computerGuess === "r")) {
-        //   wins++;
-        // } else if ((userGuess === "s") && (computerGuess === "s")) {
-        //   wins++;
-        // } else if ((userGuess === "t") && (computerGuess === "t")) {
-        //   wins++;
-        // } else if ((userGuess === "u") && (computerGuess === "u")) {
-        //   wins++;
-        // } else if ((userGuess === "v") && (computerGuess === "v")) {
-        //   wins++;
-        // } else if ((userGuess === "w") && (computerGuess === "w")) {
-        //   wins++;
-        // } else if ((userGuess === "x") && (computerGuess === "x")) {
-        //   wins++;
-        // } else if ((userGuess === "y") && (computerGuess === "y")) {
-        //   wins++;
-        // } else if ((userGuess === "z") && (computerGuess === "z")) {
-        //   wins++;
-        // } else if (userGuess === computerGuess) {
-        //   wins++;
-        // }
-
-        // Creating a variable to hold our new HTML. Our HTML now keeps track of the user and computer guesses, and wins/losses/ties.
-    
+      
   </script>
 
 </body>
